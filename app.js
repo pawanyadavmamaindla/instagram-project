@@ -17,7 +17,6 @@ mongoose.connection.on('connected',()=>{
 mongoose.connection.on('error',(err)=>{
     console.log("err connecting",err)
 })
-mongoose.set('strictQuery', false);
 
 require('./models/user')
 require('./models/post')
