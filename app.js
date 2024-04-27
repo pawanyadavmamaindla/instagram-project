@@ -10,6 +10,15 @@ mongoose.connect(MONGOURI,{
     useUnifiedTopology: true
 
 })
+
+app.use(cors(
+    {
+        origin: ["https://instagram-project-mu.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+    ));
+
 mongoose.connection.on('connected',()=>{
     console.log("conneted to mongo yeahh")
 })
