@@ -11,13 +11,6 @@ mongoose.connect(MONGOURI,{
 
 })
 
-app.use(cors(
-    {
-        origin: ["https://instagram-project-4zjw.vercel.app/signin"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-    ));
 
 mongoose.connection.on('connected',()=>{
     console.log("conneted to mongo yeahh")
