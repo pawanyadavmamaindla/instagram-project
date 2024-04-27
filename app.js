@@ -26,6 +26,10 @@ app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
 app.use(require('./routes/user'))
 
+app.get('/',(rerq,res)=>{
+    res.send('hello')
+})
+
 
 if(process.env.NODE_ENV=="production"){
     app.use(express.static('client/build'))
