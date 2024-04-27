@@ -13,7 +13,7 @@ mongoose.connect(MONGOURI,{
 
 app.use(cors(
     {
-        origin: ["https://instagram-project-mu.vercel.app"],
+        origin: ["https://instagram-project-4zjw.vercel.app/signin"],
         methods: ["POST", "GET"],
         credentials: true
     }
