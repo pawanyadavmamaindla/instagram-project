@@ -27,9 +27,6 @@ app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
 app.use(require('./routes/user'))
 
-app.get('/', (req, res) => {
-    res.send("hello")
-})
 
 
     app.use(express.static('client/build'))
