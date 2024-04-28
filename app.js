@@ -10,6 +10,8 @@ mongoose.connect(MONGOURI,{
     useUnifiedTopology: true
 
 })
+
+
 mongoose.connection.on('connected',()=>{
     console.log("conneted to mongo yeahh")
 })
@@ -24,6 +26,10 @@ app.use(express.json())
 app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
 app.use(require('./routes/user'))
+
+app.get('/', (req, res) => {
+    res.send("hello")
+})
 
 
     app.use(express.static('client/build'))
